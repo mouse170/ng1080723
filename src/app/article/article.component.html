@@ -5,7 +5,8 @@
     </li>
   </ul>
 </div>
-<div class ="post-preview" *ngFor="let article of list">
+<ng-container *ngFor="let article of list; let first = first">
+<div class ="post-preview" >
   <div class="post-meta">
     <a href="profile.html">
       <img [src]="article.author.image" />
@@ -24,7 +25,7 @@
     <span>Read more...</span>
   </a>
 </div>
-
+</ng-container>
 <div class="post-preview">
   <div class="post-meta">
     <a href="profile.html">
