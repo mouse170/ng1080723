@@ -6,16 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  constructor() { }
   count = 0;
   keyword = '';
-  constructor() { }
+
+  fontSize = 24;
+
+  highlightTitle = false;
 
   ngOnInit() {
   }
-  search($event){
+  search($event) {
     console.log($event);
-    this.count++;
-    this.keyword += '!';
+
+
+    this.highlightTitle = !this.highlightTitle;
+    ++this.fontSize;
+
   }
 
 }
