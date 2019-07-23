@@ -67,5 +67,9 @@ export class AppComponent {
       favoritesCount: 5
     }
   ];
+    originalArticles = this.list;
 
+    filterArticles(keyword: string) {
+        this.list = this.originalArticles.filter(article => article.title.indexOf(keyword) !== -1);
+    }
 }
