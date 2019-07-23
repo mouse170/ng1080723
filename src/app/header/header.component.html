@@ -5,14 +5,25 @@
     <button class="btn btn-sm btn-primary" (click)="search($event, input)">
       <i class="ion-search"></i>
     </button>
-    <span class="highlight" *ngIf="keyword === ''; then noKeyword; else yourKeyword">請輸入查詢條件</span>
+    <span class="highlight" *ngIf="keyword === '';else yourKeyword">請輸入查詢條件</span>
     <ng-template #yourKeyword>
       你輸入的文字是：{{keyword}}
     </ng-template>
     <ng-template #noKeyword>
       請輸入查詢條件
     </ng-template>
-
+<!-- ng-container, *ngTemplateOutlet 常見組合 -->
+<!--
+<td>
+  <ng-container *ngTemplateOutlet="noData"></ng-container>
+</td>
+<td>
+  <ng-container *ngIf="keyword === ''; then noData; else yourKeyword"></ng-container>
+</td>
+<ng-template #noData>
+  --
+</ng-template>
+-->
 
   </div>
 </nav>
