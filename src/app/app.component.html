@@ -1,14 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<nav class="navbar navbar-light">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">conduit</a>
-    <input class="form-control form-control-sm search-input" type="text" placeholder="Keyword">
-    <button class="btn btn-sm btn-primary">
-      <i class="ion-search"></i>
-    </button>
-  </div>
-</nav>
+
+<app-header></app-header>
 
 <div class="home-page">
 
@@ -23,7 +16,7 @@
     <div class="row">
 
       <div class="col-md-9">
-        <div class="feed-toggle">
+        <!-- <div class="feed-toggle">
           <ul class="nav nav-pills outline-active">
             <li class="nav-item">
               <a class="nav-link active" href="#">Article List</a>
@@ -77,12 +70,12 @@
               of what's happening...</p>
             <span>Read more...</span>
           </a>
-        </div>
-
+        </div> -->
+        <app-article></app-article>
       </div>
 
       <div class="col-md-3">
-        <div class="sidebar">
+        <!-- <div class="sidebar">
           <p>Popular Tags</p>
 
           <div class="tag-list">
@@ -94,7 +87,8 @@
             <a href="#" class="label label-pill label-default">node</a>
             <a href="#" class="label label-pill label-default">rails</a>
           </div>
-        </div>
+        </div> -->
+        <app-tags></app-tags>
       </div>
 
     </div>
@@ -103,7 +97,7 @@
 </div>
 
 
-<footer>
+<!-- <footer>
   <div class="container">
     <a href="/" class="logo-font">conduit</a>
     <span class="attribution">
@@ -111,6 +105,7 @@
       <a href="https://thinkster.io">Thinkster</a>. Code & design licensed under MIT.
     </span>
   </div>
-</footer>
+</footer> -->
+<app-footer></app-footer>
 
 
